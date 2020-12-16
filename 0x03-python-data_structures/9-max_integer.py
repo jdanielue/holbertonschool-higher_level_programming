@@ -4,6 +4,6 @@ def max_integer(my_list=[]):
                 return None
         temporal = my_list[0]
         for i in my_list:
-                if  i > temporal:
+                if i > temporal:
                         temporal = i
         return temporal
