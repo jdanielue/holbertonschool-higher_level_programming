@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 def square_matrix_simple(matrix=[]):
         matrizala2 = []
         for row in matrix:
