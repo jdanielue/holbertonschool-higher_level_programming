@@ -7,14 +7,14 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *liebre = NULL, *tortuga = NULL;
+	listint_t *tortuga = NULL, *liebre;
 
-	liebre = list;
 	tortuga = list;
 
-	while (tortuga != NULL)
+	while (liebre != NULL)
 	{
 		tortuga = tortuga->next;
+		liebre = tortuga->next->next;
 		if (liebre == list || liebre == tortuga)
 			return (1);
 	}
