@@ -10,13 +10,19 @@ int check_cycle(listint_t *list)
 	listint_t *tortuga = NULL, *liebre;
 
 	tortuga = list;
+	liebre = list;
+
 
 	while (liebre != NULL)
 	{
+		if (tortuga == NULL)
+			return (0);
+
 		tortuga = tortuga->next;
 		liebre = tortuga->next->next;
+
 		if (liebre == list || liebre == tortuga)
-			return (0);
+			return (1);
 	}
-	return (1);
+	return (0);
 }
