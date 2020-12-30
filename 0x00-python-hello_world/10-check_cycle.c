@@ -8,7 +8,6 @@
 int check_cycle(listint_t *list)
 {
 	listint_t *liebre = NULL, *tortuga = NULL;
-	int i;
 
 	liebre = list;
 	tortuga = list;
