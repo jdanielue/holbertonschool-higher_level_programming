@@ -1,3 +1,2 @@
 #!/bin/bash
-import compileall
-compileall.compile_dir(PYFILE)
+python3 -c compileall PYFILE
