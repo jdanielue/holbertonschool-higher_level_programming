@@ -16,7 +16,7 @@ int check_cycle(listint_t *list)
 		tortuga = tortuga->next;
 		liebre = tortuga->next->next;
 		if (liebre == list || liebre == tortuga)
-			return (1);
+			return (0);
 	}
-	return (0);
+	return (1);
 }
