@@ -1,11 +1,14 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
-    mayor = list()
-    if a_dictionary is None:
+    mayor = 0
+    retorno = ""
+    if a_dictionary is None or len(a_dictionary) == 0:
         return None
-    for actual in a_dictionary.items():
-        for comparado in a_dictionary.items():
-            if actual[1] < comparado[1]:
-                mayor = comparado[0]
 
-    return mayor
+    for comparado in a_dictionary.items():
+        if len(a_dictionary) == 1:
+            return comparado[0]
+        if comparado[1] > mayor:
+            mayor = comparado[1]
+            retorno = comparado[0]
+    return retorno
