@@ -7,5 +7,5 @@ def best_score(a_dictionary):
         for comparado in a_dictionary.items():
             if actual[1] < comparado[1]:
                 mayor = comparado[0]
-        pass
-return mayor
+
+    return mayor
