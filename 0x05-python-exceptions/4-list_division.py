@@ -18,5 +18,8 @@ def list_division(my_list_1, my_list_2, list_length):
         except IndexError:
             print("out of range")
             nueva_lista += [0]
-    finally:
-        return nueva_lista
+        
+        finally:
+            pass
+    
+    return nueva_lista
