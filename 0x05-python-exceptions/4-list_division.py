@@ -8,16 +8,16 @@ def list_division(my_list_1, my_list_2, list_length):
 
     for numero in range(tamano):
         try:
-            nueva_lista += [my_list_1[numero]/my_list_2[numero]]
+            nuevo_elemento = my_list_1[numero]/my_list_2[numero]
         except ZeroDivisionError:
             print("division by 0")
-            nueva_lista += [0]
+            nuevo_elemento = 0
         except TypeError:
             print("wrong type")
-            nueva_lista += [0]
+            nuevo_elemento = 0
         except IndexError:
             print("out of range")
-            nueva_lista += [0]
+            nuevo_elemento = 0
         finally:
-            pass
+            nueva_lista += [nuevo_elemento]
     return nueva_lista
