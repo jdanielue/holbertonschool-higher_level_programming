@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-def uniq_add(my_list=[]):
-        uniquelist = set(my_list)
-        x = 0
-        for i in uniquelist:
-                x = x + i
-        return x
+def safe_print_list_integers(my_list=[], x=0):
+        contador = 0
+        nuevo_string = ""
+        for elemento in my_list:
+                if contador < x:
+                        nuevo_string += elemento
+                contador += 1
+        return contador
