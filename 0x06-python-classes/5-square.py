@@ -27,6 +27,8 @@ class Square():
 
     def my_print(self):
         """ draw of a square """
+        if self.__size == 0
+            print("")
         lines = ""
         for column in range(self.__size):
             lines = ""
