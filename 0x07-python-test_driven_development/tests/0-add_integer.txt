@@ -1,0 +1,25 @@
+    >>> test0 = __import__('0-add_integer').add_integer
+    
+    >>> try: test0("hello", 4)
+    ... except TypeError as er: print(er)
+    a must be an integer
+
+    >>> try: test0(3, "hola")
+    ... except TypeError as er: print(er)
+    b must be an integer
+
+    >>> test0(6, 4)
+    10
+
+    >>> try: test0("hola", "hola")
+    ... except TypeError as er: print(er)
+    a must be an integer
+
+    >>> test0(2.2, 2.5)
+    4
+
+        
+
+    >>> import os
+    >>> os.popen("pep8 0-add_integer.py").read()
+    ''
