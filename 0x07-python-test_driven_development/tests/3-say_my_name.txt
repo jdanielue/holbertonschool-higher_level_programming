@@ -1,0 +1,42 @@
+The ''3-say_my_name'' module
+=============================
+
+Importing ''3-say_my_name'' from the ''3-say_my_name''.
+
+    >>> test2 = __import__('3-say_my_name').say_my_name
+
+Requirements checking:
+
+    SHEBAN:
+    >>> import os
+    >>> os.popen("cat -e 3-say_my_name.py | head -1").read()[0:-2]
+    '#!/usr/bin/python3'
+
+    MODULE DOCSTRING:
+    >>> m = __import__("3-say_my_name").__doc__
+    >>> len(m) > 1
+    True
+
+    FUNCTION DOCSTRING:
+    >>> f = __import__("3-say_my_name").say_my_name.__doc__
+    >>> len(f) > 1
+    True
+
+    >>> import os
+    >>> os.popen("pep8 0-add_integer.py").read()
+    ''
+
+    NEW_LINE AT THE END OF THE FILE
+    >>> os.popen("cat -e 3-say_my_name.py | tail -1").read()[-1]
+    '\n'
+
+
+Output
+    >>> test2("John", "smith")
+    My name is John smith
+
+    >>> test2("", "smith")
+    first_name must be a string
+
+    >>> test2("John",)
+    My name is John 

@@ -1,0 +1,45 @@
+The ''4-print_square'' module
+=============================
+
+Importing ''4-print_square'' from the ''4-print_square''.
+
+    >>> test4 = __import__('4-print_square').print_square
+
+Requirements checking:
+
+    SHEBAN:
+    >>> import os
+    >>> os.popen("cat -e 4-print_square.py | head -1").read()[0:-2]
+    '#!/usr/bin/python3'
+
+    MODULE DOCSTRING:
+    >>> m = __import__("4-print_square").__doc__
+    >>> len(m) > 1
+    True
+
+    FUNCTION DOCSTRING:
+    >>> f = __import__("4-print_square").print_square.__doc__
+    >>> len(f) > 1
+    True
+
+    >>> import os
+    >>> os.popen("pep8 0-add_integer.py").read()
+    ''
+
+    NEW_LINE AT THE END OF THE FILE
+    >>> os.popen("cat -e 4-print_square.py | tail -1").read()[-1]
+    '\n'
+
+Output
+    >>> test4(3)
+    ###
+    ###
+    ###
+
+    >>> try:test4(-3)
+    ... except ValueError as er: print(er)
+    size must be >= 0
+
+    >>> try:test4("-3")
+    ... except TypeError as er: print(er)
+    size must be an integer
