@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""[summary]
+"""[function that prints <first name> <last name>]
 """
 
 
 def say_my_name(first_name, last_name=""):
-    """[summary]
+    """[ function that prints <first name> <last name>]
 
     Args:
         first_name ([type]): [description]
