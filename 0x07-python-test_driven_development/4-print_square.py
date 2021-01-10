@@ -2,6 +2,7 @@
 """[resumennumero 2]
 """
 
+
 def print_square(size):
     """[resumen de lo que estoy haciendo]
 
@@ -12,7 +13,7 @@ def print_square(size):
 
     if type(size) != int:
         raise TypeError("size must be an integer")
-    
+
     if size < 0:
         raise ValueError("size must be >= 0")
 

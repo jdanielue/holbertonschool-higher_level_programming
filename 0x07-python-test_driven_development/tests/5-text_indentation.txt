@@ -32,21 +32,26 @@ Requirements checking:
 
 
 Output
-    >>> test5("soy del verde. Soy Feliz")
-    soy del verde.
+    >>> test5("Soy del verde. Soy Feliz")
+    Soy del verde.
     <BLANKLINE>
     Soy Feliz
 
-    >>> test5("soy del Rojo? No Soy Feliz")
-    soy del Rojo?
+    >>> test5("Soy del Rojo? No Soy Feliz")
+    Soy del Rojo?
     <BLANKLINE>
     No Soy Feliz
 
-    >>> test5("soy del verde: Soy Feliz")
-    soy del verde:
+    >>> test5("Soy del verde: Soy Feliz")
+    Soy del verde:
     <BLANKLINE>
     Soy Feliz
 
     >>> try: test5(17)
     ... except TypeError as er: print(er)
     text must be a string
+
+    >>> test5("Soy del verde.Soy Feliz")
+    Soy del verde.
+    <BLANKLINE>
+    Soy Feliz
