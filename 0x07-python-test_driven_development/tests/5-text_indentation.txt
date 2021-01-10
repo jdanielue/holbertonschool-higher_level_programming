@@ -1,0 +1,52 @@
+The ''5-text_indentation'' module
+=============================
+
+Importing ''5-text_indentation'' from the ''5-text_indentation''.
+
+    >>> test5 = __import__('5-text_indentation').text_indentation
+
+Requirements checking:
+
+    SHEBAN:
+    >>> import os
+    >>> os.popen("cat -e 5-text_indentation.py | head -1").read()[0:-2]
+    '#!/usr/bin/python3'
+
+    MODULE DOCSTRING:
+    >>> m = __import__("5-text_indentation").__doc__
+    >>> len(m) > 1
+    True
+
+    FUNCTION DOCSTRING:
+    >>> f = __import__("5-text_indentation").text_indentation.__doc__
+    >>> len(f) > 1
+    True
+
+    >>> import os
+    >>> os.popen("pep8 0-add_integer.py").read()
+    ''
+
+    NEW_LINE AT THE END OF THE FILE
+    >>> os.popen("cat -e 5-text_indentation.py | tail -1").read()[-1]
+    '\n'
+
+
+Output
+    >>> test5("soy del verde. Soy Feliz")
+    soy del verde.
+    <BLANKLINE>
+    Soy Feliz
+
+    >>> test5("soy del Rojo? No Soy Feliz")
+    soy del Rojo?
+    <BLANKLINE>
+    No Soy Feliz
+
+    >>> test5("soy del verde: Soy Feliz")
+    soy del verde:
+    <BLANKLINE>
+    Soy Feliz
+
+    >>> try: test5(17)
+    ... except TypeError as er: print(er)
+    text must be a string
