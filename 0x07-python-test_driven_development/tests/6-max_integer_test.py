@@ -23,6 +23,9 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_normal_case_all_neg(self):
       self.assertAlmostEqual(max_integer([-10, -5, -3, -8, -6]), -3)
+    
+    def test_normal_case_all_neg(self):
+      self.assertAlmostEqual(max_integer([1]), 1)
 
 if __name__ == '__main__':
     unittest.main()
