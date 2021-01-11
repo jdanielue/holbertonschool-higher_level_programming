@@ -23,7 +23,7 @@ Requirements checking:
     True
 
     >>> import os
-    >>> os.popen("pep8 1-add_integer.py").read()
+    >>> os.popen("pep8 1-rectangle.py").read()
     ''
 
     NEW_LINE AT THE END OF THE FILE
