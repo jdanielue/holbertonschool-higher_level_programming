@@ -4,14 +4,14 @@
 
 class Rectangle():
     def __init__(self, width=0, height=0):
-        """[empty class Rectangle that defines a rectangle]
+        """[class Rectangle that defines a rectangle]
 
         Args:
             width (int, optional): [description]. Defaults to 0.
             height (int, optional): [description]. Defaults to 0.
         """
-        self.height = height
-        self.width = width
+        self.__height = height
+        self.__width = width
 
     @property
     def width(self):
