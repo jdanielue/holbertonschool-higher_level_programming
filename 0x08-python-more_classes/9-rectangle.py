@@ -64,8 +64,9 @@ class Rectangle():
                 forma += hash * self.width
         return forma
 
-    def __repr__(self) -> str:
-        return f'Rectangle({self.width}, {self.height})'
+        def __repr__(self):
+            """produces a string representation."""
+            return "Rectangle({}, {})".format(self.width, self.height)
 
     def __del__(self):
         print("Bye rectangle...")
