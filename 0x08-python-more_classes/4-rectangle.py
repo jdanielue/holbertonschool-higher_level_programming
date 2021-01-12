@@ -62,5 +62,5 @@ class Rectangle():
         return forma
 
     def __repr__(self):
-        """ repr representation of a Rectangle object """
-        return "Rectangle({}, {})".format(self.width, self.height)
+        """produces a string representation."""
+        return f'Rectangle({self.width}, {self.height})'
