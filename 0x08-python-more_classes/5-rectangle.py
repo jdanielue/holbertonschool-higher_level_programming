@@ -62,9 +62,7 @@ class Rectangle():
         return forma
 
     def __repr__(self):
-        """produces a string representation."""
         return "Rectangle({}, {})".format(self.width, self.height)
 
     def __del__(self):
-    """ destructor for Rectangle object. Prints a message """
         print("Bye rectangle...")
