@@ -67,5 +67,4 @@ class Rectangle():
 
     def __del__(self):
     """ destructor for Rectangle object. Prints a message """
-
         print("Bye rectangle...")
