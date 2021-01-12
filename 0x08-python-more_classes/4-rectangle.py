@@ -61,5 +61,5 @@ class Rectangle():
                 forma += hash * self.width
         return forma
 
-    def __repr__(self) -> str:
+    def __repr__(self):
         return f'Rectangle({self.width}, {self.height})'
