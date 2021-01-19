@@ -1,0 +1,34 @@
+The ''1-my_list'' module
+=============================
+
+Importing ''1-my_list'' from the ''1-my_list''.
+
+    >>> test1 = __import__('1-my_list').my_list
+
+Requirements checking:
+
+    SHEBAN:
+    >>> import os
+    >>> os.popen("cat -e 1-my_list.py | head -1").read()[0:-2]
+    '#!/usr/bin/python3'
+
+    MODULE DOCSTRING:
+    >>> m = __import__("1-my_list").__doc__
+    >>> len(m) > 1
+    True
+
+    FUNCTION DOCSTRING:
+    >>> f = __import__("1-my_list").my_list.__doc__
+    >>> len(f) > 1
+    True
+
+    >>> import os
+    >>> os.popen("pep8 1-my_list.py").read()
+    ''
+
+    NEW_LINE AT THE END OF THE FILE
+    >>> os.popen("cat -e 1-my_list.py | tail -1").read()[-1]
+    '\n'
+
+
+Output
