@@ -1,0 +1,46 @@
+The ''7-base_geometry'' module
+=============================
+
+Importing ''7-base_geometry'' from the ''7-base_geometry''.
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Requirements checking:
+
+    SHEBAN:
+    >>> import os
+    >>> os.popen("cat -e 7-base_geometry.py | head -1").read()[0:-2]
+    '#!/usr/bin/python3'
+
+    MODULE DOCSTRING:
+    >>> m = __import__("7-base_geometry").__doc__
+    >>> len(m) > 1
+    True
+
+    FUNCTION DOCSTRING:
+    >>> f = __import__("7-base_geometry").BaseGeometry.__doc__
+    >>> len(f) > 1
+    True
+
+    >>> import os
+    >>> os.popen("pep8 7-base_geometry.py").read()
+    ''
+
+    NEW_LINE AT THE END OF THE FILE
+    >>> os.popen("cat -e 7-base_geometry.py | tail -1").read()[-1]
+    '\n'
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("12", 12)
+
+    >>> try: bg.integer_validator("width", 0)
+    ... except ValueError as er: print(er)
+    width must be greater than 0
+
+    >>> try: bg.integer_validator("width", 7.4)
+    ... except TypeError as er: print(er)
+    width must be an integer
+
+    >>> try: bg.integer_validator("width", [7.3, 2])
+    ... except TypeError as er: print(er)
+    width must be an integer
