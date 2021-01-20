@@ -69,6 +69,7 @@ Output
     >>> my_list.print_sorted()
     [0, 0, 0, 0, 0]
 
+    >>> my_list = MyList()
     >>> my_list.append(-1)
     >>> my_list.append(-4)
     >>> my_list.append(-2)
@@ -77,5 +78,7 @@ Output
     >>> my_list.print_sorted()
     [-6, -4, -3, -2, -1]
 
-    >>> my_list.append()
-    []
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.print_sorted()
+    [1]
