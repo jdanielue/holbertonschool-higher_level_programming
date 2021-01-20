@@ -2,6 +2,9 @@
 """[empty class BaseGeometry]"""
 
 
+Rectangle = __import__('9-rectangle').Rectangle
+
+
 class BaseGeometry():
     """[empty class BaseGeometry]"""
     def area(self):
