@@ -2,7 +2,7 @@
 """class Rectangle that inherits from Base"""
 
 
-Base = __import__("models.base", fromlist=[None]).Base
+from models.base import Base
 
 
 class Rectangle(Base):

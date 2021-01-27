@@ -18,10 +18,12 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        """ clss method that return the str rep of a rectangle"""
         return self.width
 
     @size.setter
     def size(self, value):
+        """ clss method that return the str rep of a rectangle"""
         self.width = value
         self.height = value
 
