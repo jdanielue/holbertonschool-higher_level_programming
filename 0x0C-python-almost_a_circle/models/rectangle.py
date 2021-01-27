@@ -108,6 +108,7 @@ class Rectangle(Base):
                     setattr(self, element_key, values)
 
     def to_dictionary(self):
+        """ clss method that return the dictionary of a rectangle"""
         new_dict = self.__dict__.copy()
         for old_key, value in self.__dict__.items():
             new_key = old_key.replace("_Rectangle__", "")
