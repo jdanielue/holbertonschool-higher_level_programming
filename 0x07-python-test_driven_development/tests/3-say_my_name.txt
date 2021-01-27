@@ -35,7 +35,8 @@ Output
     >>> test2("John", "smith")
     My name is John smith
 
-    >>> test2("", "smith")
+    >>> try:test2("", "smith")
+    ... except TypeError as er: print(er)
     first_name must be a string
 
     >>> test2("John",)

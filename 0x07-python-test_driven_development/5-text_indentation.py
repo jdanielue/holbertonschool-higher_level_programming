@@ -15,7 +15,7 @@ def text_indentation(text):
         raise TypeError("text must be a string")
 
     for position in range(0, len(text)):
-        if (text[position - 1] == "." or text[position - 1] == "?"\
+        if (text[position - 1] == "." or text[position - 1] == "?"
          or text[position - 1] == ":") and text[position] == " ":
             continue
         new_text += text[position]
