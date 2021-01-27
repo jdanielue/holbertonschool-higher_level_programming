@@ -17,10 +17,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """Constructor class Rectangle that inherits from Base"""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """Constructor class Rectangle that inherits from Base"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -29,10 +31,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """Constructor class Rectangle that inherits from Base"""
         return self.__height
 
     @height.setter
     def height(self, value):
+        """Constructor class Rectangle that inherits from Base"""
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -41,10 +45,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """Constructor class Rectangle that inherits from Base"""
         return self.__x
 
     @x.setter
     def x(self, value):
+        """Constructor class Rectangle that inherits from Base"""
         if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -53,10 +59,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """Constructor class Rectangle that inherits from Base"""
         return self.__y
 
     @y.setter
     def y(self, value):
+        """Constructor class Rectangle that inherits from Base"""
         if type(value) is not int:
             raise TypeError("y must be an integer")
         if value < 0:
