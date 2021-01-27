@@ -105,8 +105,11 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """ clss method that return the update of a rectangle"""
         attributes = ["id", "width", "height", "x", "y"]
-        dict_att = {'id': self.id, 'width': self.width, 'height': self.height
-                    'x': self.x, 'y': self.y}
+        dict_att = {'id': self.id,
+                    'width': self.width,
+                    'height': self.height,
+                    'x': self.x,
+                    'y': self.y}
         if args and len(args) != 0:
             for element, att in zip(attributes, args):
                 setattr(self, element, att)
