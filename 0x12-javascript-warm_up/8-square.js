@@ -3,7 +3,7 @@ let array = [];
 const letra = 'X';
 
 if (isNaN(Number(`${process.argv[2]}`))) {
-    console.log('Missing size');
+  console.log('Missing size');
 }
 
 for (let largo = 1; largo <= `${process.argv[2]}`; largo++) {
