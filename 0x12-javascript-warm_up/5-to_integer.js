@@ -1,3 +1,10 @@
 #!/usr/bin/node
-console.log(typeof(`${process.argv[2]}`));
-console.log(Number(`${process.argv[2]}`));
+
+if (isNaN(Number(`${process.argv[2]}`)))
+{
+    console.log('Not a number');
+}
+else
+{
+    console.log('My number: ' + `${process.argv[2]}`);
+}
