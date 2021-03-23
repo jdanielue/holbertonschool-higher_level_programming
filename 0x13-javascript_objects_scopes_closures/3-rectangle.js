@@ -11,6 +11,6 @@ module.exports = class Rectangle {
       for (let contador = 1; contador <= this.height; contador++) {
         console.log(forma.repeat(this.width));
       }
-    };
+    }
   }
 };
