@@ -1,6 +1,6 @@
 #!/usr/bin/node
 let a;
-for (let count= 0; count< Math.floor(list.length / 2); i++) {
+for (let count= 0; count< Math.floor(list.length / 2); count++) {
     a = list[count];
     list[count] = list[list.length - count- 1];
     list[list.length - count- 1] = a;
