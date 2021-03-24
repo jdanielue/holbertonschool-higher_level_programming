@@ -2,5 +2,5 @@
 let ocr = 0;
 exports.logMe = function (item) {
   console.log(`${ocr}:`, item);
-  ocr++
+  ocr++;
 };
