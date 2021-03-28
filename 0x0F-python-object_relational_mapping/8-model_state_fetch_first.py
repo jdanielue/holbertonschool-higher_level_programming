@@ -13,8 +13,7 @@ if __name__ == "__main__":
 
     Session = sessionmaker()
     session = Session(bind=engine)
-    if (len(session.query(State)) == 0):
-        print("nothing")
-    for state in session.query(State).order_by(State.id).filter_by(id=1):
+
+    for state in session.query(State).order_by(State.id).filter_by(id="1"):
         print("{}: {}".format(state.id, state.name))
     session.close()
