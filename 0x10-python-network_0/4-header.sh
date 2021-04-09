@@ -1,3 +1,3 @@
 #!/bin/bash
 # script
-curl -s -H 'X-HolbertonSchool-User-Id: 98' "$1"
+curl $1 -s -X GET-H "X-HolbertonSchool-User-Id: 98"
