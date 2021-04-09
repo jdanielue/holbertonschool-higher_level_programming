@@ -1,3 +1,3 @@
-#!/bin/bash
-# displays the HTTP methods the server will accept.
-curl -s -X OPTIONS "$1"
+!/bin/bash
+# displays the body of the response
+curl -s -I "$1" | grep "Allow" | cut --complement -d':'  -f1
