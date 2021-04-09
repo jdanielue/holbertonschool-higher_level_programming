@@ -1,4 +1,3 @@
-  
 #!/bin/bash
-# script to add a header
+# script
 curl -s -H 'X-HolbertonSchool-User-Id: 98' "$1"
