@@ -2,6 +2,6 @@
 
 const https = require('https');
 
-https.get('https://encrypted.google.com/', (res) => {
+https.get(process.argv[2], (res) => {
   console.log('statusCode:', res.statusCode);
 });
