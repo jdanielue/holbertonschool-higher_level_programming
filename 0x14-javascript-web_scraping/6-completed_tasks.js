@@ -11,7 +11,7 @@ request(process.argv[2], function (error, response, body) {
   let contador = 0;
   let usridCounter = 0;
   for (const element of jsonbody) {
-    if (usridCounter !== element.userId) {
+    if ((usridCounter !== element.userId) && (element.completed === true)) {
       contador = 0;
       usridCounter = element.userId;
     }
