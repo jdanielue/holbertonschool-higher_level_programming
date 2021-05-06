@@ -16,7 +16,7 @@ request(process.argv[2], function (error, response, body) {
       usridCounter = element.userId;
     }
     if (element.completed === true) {
-      contador += 1;
+      contador += 2;
       newdict[element.userId] = contador;
     }
   }
