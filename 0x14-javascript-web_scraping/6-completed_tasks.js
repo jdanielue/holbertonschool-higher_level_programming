@@ -8,16 +8,16 @@ request(process.argv[2], function (error, response, body) {
   }
   const jsonbody = JSON.parse(body);
   const newdict = {};
-  let contador = 0;
-  let usridCounter = 0;
+  let contador;
+  let usridCounter;
   for (const element of jsonbody) {
-    if ((usridCounter !== element.userId) && (element.completed === true)) {
-      contador = 0;
-      usridCounter = element.userId;
-    }
-    if (element.completed === true) {
-      contador += 2;
-      newdict[element.userId] = contador;
+    usridCounter = element.userId;
+    contador = element.completed;
+    if (contador) {
+      if (!newdict[usridCounter]) {
+        newdict[usridCounter] = 0;
+      }
+      newdict[usridCounter] += 1;
     }
   }
   console.log(newdict);
